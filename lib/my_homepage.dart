@@ -43,6 +43,23 @@ class _MyHomePageState extends State<MyHomePage> {
                     borderRadius: BorderRadius.circular(30),
                     color: Colors.white,
                   ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: const [
+                      Padding(
+                        padding: EdgeInsets.only(top: 45.0),
+                        child: Text("Welcome", style: TextStyle( fontWeight: FontWeight.bold, fontSize: 40),),
+                      ),
+                         Padding(
+                           padding: EdgeInsets.all(20.0),
+                           
+                             child: Center(
+                               child: Text("Explore the all new way to build your fitness and find the perfect fit for you",
+                            style: TextStyle( fontWeight: FontWeight.normal, fontSize: 20, color: Colors.grey),),
+                             )),
+                        
+                      
+                    ]),
           ),
         )
       ]),
