@@ -21,7 +21,7 @@ class SecondPage extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               height: 400,
               child: Image.asset(
-                "images/guy.png",
+                "images/page2.jpg",
                 fit: BoxFit.cover,
               )),
         ),
@@ -39,7 +39,7 @@ class SecondPage extends StatelessWidget {
                   const Padding(
                     padding: EdgeInsets.only(top: 45.0),
                     child: Text(
-                      "Welcome",
+                      "Customize",
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 40),
                     ),
@@ -48,7 +48,7 @@ class SecondPage extends StatelessWidget {
                       padding: EdgeInsets.all(20.0),
                       child: Center(
                         child: Text(
-                          "Explore the all new way to build your fitness and find the perfect fit for you",
+                          "Feel free to adjust your workout & diet settings according to your comfort",
                           style: TextStyle(
                               fontWeight: FontWeight.normal,
                               fontSize: 20,
