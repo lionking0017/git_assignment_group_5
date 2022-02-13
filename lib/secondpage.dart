@@ -47,8 +47,7 @@ class SecondPage extends StatelessWidget {
                   const Padding(
                       padding: EdgeInsets.all(20.0),
                       child: Center(
-                        child: Text(
-                          "Feel free to adjust your workout & diet settings according to your comfort",
+                        child: Text("Feel free to adjust your workout & diet settings according to your comfort",
                           style: TextStyle(
                               fontWeight: FontWeight.normal,
                               fontSize: 20,

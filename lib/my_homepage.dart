@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:git_ass/secondpage.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
 
-  final String title;
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({Key? key}) : super(key: key);
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -85,7 +84,6 @@ class _MyHomePageState extends State<MyHomePage> {
                         Container(
                           margin: const EdgeInsets.only(right: 20),
                           child: ElevatedButton(
-<<<<<<< HEAD
                               style: ElevatedButton.styleFrom(
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(500)),
@@ -105,7 +103,6 @@ class _MyHomePageState extends State<MyHomePage> {
                               child: const Text('Next',
                                   style: TextStyle(fontSize: 20))),
                         ),
-=======
                             style: ElevatedButton.styleFrom(
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(500)),
@@ -123,7 +120,6 @@ class _MyHomePageState extends State<MyHomePage> {
                             child: const Text('Next'),
                           ),
                         )
->>>>>>> main
                       ],
                     ),
                   ),
