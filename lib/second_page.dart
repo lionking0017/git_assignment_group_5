@@ -13,6 +13,7 @@ class _SecondPageState extends State<SecondPage> {
     return Scaffold(
       body: Stack(children: [
         Container(
+          decoration: const BoxDecoration(color: null),
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
           child: Image.asset(
@@ -23,6 +24,7 @@ class _SecondPageState extends State<SecondPage> {
         Padding(
           padding: const EdgeInsets.only(top: 90.0),
           child: Container(
+              decoration: const BoxDecoration(color: null),
               width: MediaQuery.of(context).size.width,
               height: 400,
               child: Image.asset(
@@ -50,7 +52,7 @@ class _SecondPageState extends State<SecondPage> {
                     ),
                   ),
                   const Padding(
-                     padding: EdgeInsets.all(20.0),
+                      padding: EdgeInsets.all(20.0),
                       child: Center(
                         child: Text(
                           "Feel Free to adjust your workout and diet settings according to your comfort",
@@ -59,8 +61,7 @@ class _SecondPageState extends State<SecondPage> {
                               fontSize: 20,
                               color: Colors.grey),
                         ),
-                      )
-                  ),
+                      )),
                   Padding(
                     padding: const EdgeInsets.only(top: 100.0),
                     child: Row(

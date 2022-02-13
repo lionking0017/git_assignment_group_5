@@ -1,12 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-<<<<<<< HEAD
 import 'package:git_ass/my_app.dart';
-=======
-
-// ignore: unused_import
-import 'package:git_ass/main.dart';
->>>>>>> dde6a5bde87f9de4d3abe4bbf5e77ebf18ef6be8
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
