@@ -1,37 +1,32 @@
 import 'package:flutter/material.dart';
-import 'package:git_ass/second_page.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
+class SecondPage extends StatefulWidget {
+  const SecondPage({Key? key}) : super(key: key);
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<SecondPage> createState() => _SecondPageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _SecondPageState extends State<SecondPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(children: [
         Container(
-          decoration: const BoxDecoration(color: null),
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
           child: Image.asset(
-            "images/bgbg.jpg",
+            "images/vector.jpg",
             fit: BoxFit.cover,
           ),
         ),
         Padding(
           padding: const EdgeInsets.only(top: 90.0),
           child: Container(
-              decoration: const BoxDecoration(color: null),
               width: MediaQuery.of(context).size.width,
               height: 400,
               child: Image.asset(
-                "images/guy.png",
+                "images/Brock.png",
                 fit: BoxFit.cover,
               )),
         ),
@@ -49,22 +44,23 @@ class _MyHomePageState extends State<MyHomePage> {
                   const Padding(
                     padding: EdgeInsets.only(top: 45.0),
                     child: Text(
-                      "Welcome",
+                      "Customize",
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 40),
                     ),
                   ),
                   const Padding(
-                      padding: EdgeInsets.all(20.0),
+                     padding: EdgeInsets.all(20.0),
                       child: Center(
                         child: Text(
-                          "Explore the all new way to build your fitness and find the perfect fit for you",
+                          "Feel Free to adjust your workout and diet settings according to your comfort",
                           style: TextStyle(
                               fontWeight: FontWeight.normal,
                               fontSize: 20,
                               color: Colors.grey),
                         ),
-                      )),
+                      )
+                  ),
                   Padding(
                     padding: const EdgeInsets.only(top: 100.0),
                     child: Row(
@@ -88,13 +84,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               onPrimary: Colors.white,
                               // foreground
                             ),
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => SecondPage(),
-                                  ));
-                            },
+                            onPressed: () {},
                             child: const Text('Next'),
                           ),
                         )
