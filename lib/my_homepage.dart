@@ -90,7 +90,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => SecondPage(),
+                                    builder: (context) => BethelPage(),
                                   ));
                             },
                             child: const Text('Next'),
