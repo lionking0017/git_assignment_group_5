@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:git_ass/third_page.dart';
 
 class SecondPage extends StatefulWidget {
-  const SecondPage({Key? key}) : super(key: key);
+  final title;
+
+  const SecondPage({Key? key, required this.title}) : super(key: key);
 
   @override
   State<SecondPage> createState() => _SecondPageState();
@@ -56,7 +59,8 @@ class _SecondPageState extends State<SecondPage> {
                       padding: EdgeInsets.all(20.0),
                       child: Center(
                         child: Text(
-                          "Feel Free to adjust your workout and diet settings according to your comfort",
+                          "Feel Free to adjust your workout and diet settings according to your comfort.",
+                          textAlign: TextAlign.center,
                           style: TextStyle(
                               fontWeight: FontWeight.normal,
                               fontSize: 20,
@@ -86,8 +90,17 @@ class _SecondPageState extends State<SecondPage> {
                               onPrimary: Colors.white,
                               // foreground
                             ),
-                            onPressed: () {},
-                            child: const Text('Next'),
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => const ThirdPage(
+                                      title: 'null',
+                                    ),
+                                  ));
+                            },
+                            child: const Text('Next',
+                                style: TextStyle(fontSize: 20)),
                           ),
                         )
                       ],

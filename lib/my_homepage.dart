@@ -59,7 +59,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       padding: EdgeInsets.all(20.0),
                       child: Center(
                         child: Text(
-                          "Explore the all new way to build your fitness and find the perfect fit for you",
+                          "Explore the all new way to build your fitness and find the perfect fit for you.",
+                          textAlign: TextAlign.center,
                           style: TextStyle(
                               fontWeight: FontWeight.normal,
                               fontSize: 20,
@@ -82,6 +83,27 @@ class _MyHomePageState extends State<MyHomePage> {
                         Container(
                           margin: const EdgeInsets.only(right: 20),
                           child: ElevatedButton(
+<<<<<<< HEAD
+                              style: ElevatedButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(500)),
+                                primary: Colors.black, // background
+                                onPrimary: Colors.white,
+                                // foreground
+                              ),
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const SecondPage(
+                                        title: null,
+                                      ),
+                                    ));
+                              },
+                              child: const Text('Next',
+                                  style: TextStyle(fontSize: 20))),
+                        ),
+=======
                             style: ElevatedButton.styleFrom(
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(500)),
@@ -99,6 +121,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             child: const Text('Next'),
                           ),
                         )
+>>>>>>> main
                       ],
                     ),
                   ),
