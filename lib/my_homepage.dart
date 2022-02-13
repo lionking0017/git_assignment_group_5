@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:git_ass/secondpage.dart';
+import 'package:git_ass/second_page.dart';
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
+  const MyHomePage({Key? key}) : super(key: key);
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -90,45 +88,47 @@ class _MyHomePageState extends State<MyHomePage> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => SecondPage()),
+                                    builder: (context) => const SecondPage()),
                               );
                             },
-                            child: const Text('Next'),
+                            child: const Text('Next',
+                            style: TextStyle(fontSize: 20)),
                           ),
-                        )
+                        ),
                       ],
                     ),
                   ),
                 ]),
           ),
         ),
-        Container(
-          child: Row(
-            children: [
-              Container(
-                child: TextButton(
-                    onPressed: () {},
-                    child: const Text("Skip",
-                        style: TextStyle(fontSize: 20, color: Colors.black))),
-              ),
-              Expanded(child: Container()),
-              Container(
-                margin: const EdgeInsets.only(right: 15),
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(500)),
-                    primary: Colors.black, // background
-                    onPrimary: Colors.white,
-                    // foreground
-                  ),
-                  onPressed: () {},
-                  child: const Text('Next'),
-                ),
-              )
-            ],
-          ),
-        ),
+        // Container(
+        //   child: Row(
+        //      children: [
+        //        Container(
+
+        //          child: TextButton(onPressed: () {}, child: const Text("Skip",
+        //          style: TextStyle(fontSize: 20, color: Colors.black))),
+        //        ),
+
+        //        Expanded(child: Container()),
+        //        Container(
+        //          margin: const EdgeInsets.only(right: 15),
+
+        //                 child: ElevatedButton(
+        //                   style: ElevatedButton.styleFrom(
+        //                     shape: RoundedRectangleBorder(
+        //                         borderRadius: BorderRadius.circular(500)),
+        //                     primary: Colors.black, // background
+        //                     onPrimary: Colors.white,
+        //                     // foreground
+        //                   ),
+        //                   onPressed: () {},
+        //                   child: const Text('Next'),
+        //                 ),
+        //               )
+        //      ],
+        //   ),
+        // ),
       ]),
     );
   }
