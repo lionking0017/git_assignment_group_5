@@ -36,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
               )),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 400.0),
+          padding: const EdgeInsets.only(top: 450.0),
           child: Container(
             width: MediaQuery.of(context).size.width,
             decoration: const BoxDecoration(
