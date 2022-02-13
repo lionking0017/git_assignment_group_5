@@ -22,46 +22,79 @@ class _MyHomePageState extends State<MyHomePage> {
             fit: BoxFit.cover,
           ),
         ),
-       
         Padding(
           padding: const EdgeInsets.only(top: 90.0),
           child: Container(
-            width: MediaQuery.of(context).size.width,
-            height: 400,
-            child: Image.asset(
-              "images/guy.png",
-              fit: BoxFit.cover,
-            )),
+              width: MediaQuery.of(context).size.width,
+              height: 400,
+              child: Image.asset(
+                "images/guy.png",
+                fit: BoxFit.cover,
+              )),
         ),
-
         Padding(
           padding: const EdgeInsets.only(top: 450.0),
           child: Container(
             width: MediaQuery.of(context).size.width,
-            
             decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30),
-                    color: Colors.white,
+              borderRadius: BorderRadius.circular(30),
+              color: Colors.white,
+            ),
+            child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: const [
+                  Padding(
+                    padding: EdgeInsets.only(top: 45.0),
+                    child: Text(
+                      "Welcome",
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 40),
+                    ),
                   ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: const [
-                      Padding(
-                        padding: EdgeInsets.only(top: 45.0),
-                        child: Text("Welcome", style: TextStyle( fontWeight: FontWeight.bold, fontSize: 40),),
-                      ),
-                         Padding(
-                           padding: EdgeInsets.all(20.0),
-                           
-                             child: Center(
-                               child: Text("Explore the all new way to build your fitness and find the perfect fit for you",
-                            style: TextStyle( fontWeight: FontWeight.normal, fontSize: 20, color: Colors.grey),),
-                             )),
-                        
+
+                  
+                  Padding(
+                      padding: EdgeInsets.all(20.0),
+                      child: Center(
+                        child: Text(
+                          "Explore the all new way to build your fitness and find the perfect fit for you",
+                          style: TextStyle(
+                              fontWeight: FontWeight.normal, 
+                              fontSize: 20, 
+                              color: Colors.grey),
+                        ),
+                      )),
                       
-                    ]),
+                ]),
           ),
-        )
+        ),
+        Container( 
+          child: Row(
+             children: [
+               Container(
+                 
+                 child: TextButton(onPressed: () {}, child: Text("Skip", style: TextStyle(fontSize: 30),)),
+               ),
+               
+               Expanded(child: Container()),
+               Container(
+                 margin: EdgeInsets.only(right: 15),
+                        
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(500)),
+                            primary: Colors.red, // background
+                            onPrimary: Colors.white,
+                            // foreground
+                          ),
+                          onPressed: () {},
+                          child: const Text('Next'),
+                        ),
+                      )
+             ],
+          ),
+        ),
       ]),
     );
   }
