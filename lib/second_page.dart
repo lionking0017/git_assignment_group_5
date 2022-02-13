@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 class SecondPage extends StatefulWidget {
   const SecondPage({Key? key}) : super(key: key);
 
-
   @override
   State<SecondPage> createState() => _SecondPageState();
 }
@@ -54,14 +53,13 @@ class _SecondPageState extends State<SecondPage> {
                       padding: EdgeInsets.all(20.0),
                       child: Center(
                         child: Text(
-                          "",
+                          "Feel Free to adjust your workout BRO",
                           style: TextStyle(
                               fontWeight: FontWeight.normal,
                               fontSize: 20,
                               color: Colors.grey),
                         ),
                       )),
-                      
                   Padding(
                     padding: const EdgeInsets.only(top: 100.0),
                     child: Row(
@@ -95,7 +93,7 @@ class _SecondPageState extends State<SecondPage> {
                 ]),
           ),
         ),
-             ]),
+      ]),
     );
   }
 }
