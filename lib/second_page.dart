@@ -46,7 +46,7 @@ class _SecondPageState extends State<SecondPage> {
                   const Padding(
                     padding: EdgeInsets.only(top: 45.0),
                     child: Text(
-                      "",
+                      "Customize",
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 40),
                     ),
@@ -55,7 +55,7 @@ class _SecondPageState extends State<SecondPage> {
                      padding: EdgeInsets.all(20.0),
                       child: Center(
                         child: Text(
-                          "",
+                          "Feel Free to adjust your workout and diet settings according to your comfort",
                           style: TextStyle(
                               fontWeight: FontWeight.normal,
                               fontSize: 20,
