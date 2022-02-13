@@ -47,7 +47,15 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  const Padding(),
+                  const Padding(
+                    
+                    padding: EdgeInsets.only(top: 45.0),
+                    child: Text(
+                      "Welcome",
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 40),
+                    
+                  ),
                   ),
                   const Padding(
                       padding: EdgeInsets.all(20.0),
