@@ -63,6 +63,8 @@ flutter:
   - images/bgbg.jpg
   - images/macho-removebg-preview.png
   - images/guy.png
+  - images/Brock.png
+  - images/vector.jpg
   
 
   # An image asset can refer to one or more resolution-specific "variants", see
