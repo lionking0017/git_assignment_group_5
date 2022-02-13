@@ -11,7 +11,6 @@ class _SecondPageState extends State<SecondPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       body: Stack(children: [
         Container(
           width: MediaQuery.of(context).size.width,
@@ -32,7 +31,6 @@ class _SecondPageState extends State<SecondPage> {
               )),
         ),
         Padding(
-          
           padding: const EdgeInsets.only(top: 450.0),
           child: Container(
             width: MediaQuery.of(context).size.width,
@@ -52,7 +50,7 @@ class _SecondPageState extends State<SecondPage> {
                     ),
                   ),
                   const Padding(
-                     padding: EdgeInsets.all(20.0),
+                      padding: EdgeInsets.all(20.0),
                       child: Center(
                         child: Text(
                           "Feel Free to adjust your workout and diet settings according to your comfort",
@@ -61,8 +59,7 @@ class _SecondPageState extends State<SecondPage> {
                               fontSize: 20,
                               color: Colors.grey),
                         ),
-                      )
-                  ),
+                      )),
                   Padding(
                     padding: const EdgeInsets.only(top: 100.0),
                     child: Row(
@@ -95,10 +92,8 @@ class _SecondPageState extends State<SecondPage> {
                   ),
                 ]),
           ),
-        
         ),
       ]),
-    
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:git_ass/second_page.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
@@ -62,7 +63,6 @@ class _MyHomePageState extends State<MyHomePage> {
                               color: Colors.grey),
                         ),
                       )),
-                      
                   Padding(
                     padding: const EdgeInsets.only(top: 100.0),
                     child: Row(
@@ -86,7 +86,13 @@ class _MyHomePageState extends State<MyHomePage> {
                               onPrimary: Colors.white,
                               // foreground
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => SecondPage()),
+                              );
+                            },
                             child: const Text('Next'),
                           ),
                         )
