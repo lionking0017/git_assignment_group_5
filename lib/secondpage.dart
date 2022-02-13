@@ -19,7 +19,7 @@ class SecondPage extends StatelessWidget {
           padding: const EdgeInsets.only(top: 90.0),
           child: Container(
               width: MediaQuery.of(context).size.width,
-              height: 400,
+              height: 401,
               child: Image.asset(
                 "images/page2.jpg",
                 fit: BoxFit.cover,
