@@ -36,8 +36,9 @@ class _SecondPageState extends State<SecondPage> {
           padding: const EdgeInsets.only(top: 450.0),
           child: Container(
             width: MediaQuery.of(context).size.width,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30),
+            decoration: const BoxDecoration(
+              borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(30), topRight: Radius.circular(30)),
               color: Colors.white,
             ),
             child: Column(
