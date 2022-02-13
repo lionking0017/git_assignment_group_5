@@ -42,8 +42,8 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
-                children: const [
-                  Padding(
+                children: [
+                  const Padding(
                     padding: EdgeInsets.only(top: 45.0),
                     child: Text(
                       "Welcome",
@@ -51,50 +51,79 @@ class _MyHomePageState extends State<MyHomePage> {
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 40),
                     ),
                   ),
-
-                  
-                  Padding(
+                  const Padding(
                       padding: EdgeInsets.all(20.0),
                       child: Center(
                         child: Text(
                           "Explore the all new way to build your fitness and find the perfect fit for you",
                           style: TextStyle(
-                              fontWeight: FontWeight.normal, 
-                              fontSize: 20, 
+                              fontWeight: FontWeight.normal,
+                              fontSize: 20,
                               color: Colors.grey),
                         ),
                       )),
                       
+                  Padding(
+                    padding: const EdgeInsets.only(top: 100.0),
+                    child: Row(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(left: 20),
+                          child: TextButton(
+                              onPressed: () {},
+                              child: const Text("Skip",
+                                  style: TextStyle(
+                                      fontSize: 20, color: Colors.black))),
+                        ),
+                        Expanded(child: Container()),
+                        Container(
+                          margin: const EdgeInsets.only(right: 20),
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(500)),
+                              primary: Colors.black, // background
+                              onPrimary: Colors.white,
+                              // foreground
+                            ),
+                            onPressed: () {},
+                            child: const Text('Next'),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
                 ]),
           ),
         ),
-        Container( 
-          child: Row(
-             children: [
-               Container(
-                 
-                 child: TextButton(onPressed: () {}, child: Text("Skip", style: TextStyle(fontSize: 30),)),
-               ),
-               
-               Expanded(child: Container()),
-               Container(
-                 margin: EdgeInsets.only(right: 15),
-                        
-                        child: ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(500)),
-                            primary: Colors.red, // background
-                            onPrimary: Colors.white,
-                            // foreground
-                          ),
-                          onPressed: () {},
-                          child: const Text('Next'),
-                        ),
-                      )
-             ],
-          ),
-        ),
+        // Container(
+        //   child: Row(
+        //      children: [
+        //        Container(
+
+        //          child: TextButton(onPressed: () {}, child: const Text("Skip",
+        //          style: TextStyle(fontSize: 20, color: Colors.black))),
+        //        ),
+
+        //        Expanded(child: Container()),
+        //        Container(
+        //          margin: const EdgeInsets.only(right: 15),
+
+        //                 child: ElevatedButton(
+        //                   style: ElevatedButton.styleFrom(
+        //                     shape: RoundedRectangleBorder(
+        //                         borderRadius: BorderRadius.circular(500)),
+        //                     primary: Colors.black, // background
+        //                     onPrimary: Colors.white,
+        //                     // foreground
+        //                   ),
+        //                   onPressed: () {},
+        //                   child: const Text('Next'),
+        //                 ),
+        //               )
+        //      ],
+        //   ),
+        // ),
       ]),
     );
   }
