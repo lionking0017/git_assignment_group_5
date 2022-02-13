@@ -1,37 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:git_ass/third_page.dart';
 
-class SecondPage extends StatefulWidget {
-  final title;
+class SecondPage extends StatelessWidget {
+  const SecondPage({Key? key}) : super(key: key);
 
-  const SecondPage({Key? key, required this.title}) : super(key: key);
-
-  @override
-  State<SecondPage> createState() => _SecondPageState();
-}
-
-class _SecondPageState extends State<SecondPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(children: [
         Container(
-          decoration: const BoxDecoration(color: null),
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
           child: Image.asset(
-            "images/vector.jpg",
+            "images/bgbg.jpg",
             fit: BoxFit.cover,
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 90.0),
+          padding: const EdgeInsets.only(top: 91.0),
           child: Container(
-              decoration: const BoxDecoration(color: null),
               width: MediaQuery.of(context).size.width,
               height: 400,
               child: Image.asset(
-                "images/Brock.png",
+                "images/page2.jpg",
                 fit: BoxFit.cover,
               )),
         ),
@@ -39,9 +29,8 @@ class _SecondPageState extends State<SecondPage> {
           padding: const EdgeInsets.only(top: 450.0),
           child: Container(
             width: MediaQuery.of(context).size.width,
-            decoration: const BoxDecoration(
-              borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(30), topRight: Radius.circular(30)),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(30),
               color: Colors.white,
             ),
             child: Column(
@@ -58,9 +47,7 @@ class _SecondPageState extends State<SecondPage> {
                   const Padding(
                       padding: EdgeInsets.all(20.0),
                       child: Center(
-                        child: Text(
-                          "Feel Free to adjust your workout and diet settings according to your comfort.",
-                          textAlign: TextAlign.center,
+                        child: Text("Feel free to adjust your workout & diet settings according to your comfort",
                           style: TextStyle(
                               fontWeight: FontWeight.normal,
                               fontSize: 20,
@@ -90,17 +77,8 @@ class _SecondPageState extends State<SecondPage> {
                               onPrimary: Colors.white,
                               // foreground
                             ),
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => const ThirdPage(
-                                      title: 'null',
-                                    ),
-                                  ));
-                            },
-                            child: const Text('Next',
-                                style: TextStyle(fontSize: 20)),
+                            onPressed: () {},
+                            child: const Text('Next'),
                           ),
                         )
                       ],
