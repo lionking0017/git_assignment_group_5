@@ -97,34 +97,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ]),
           ),
         ),
-        // Container(
-        //   child: Row(
-        //      children: [
-        //        Container(
-
-        //          child: TextButton(onPressed: () {}, child: const Text("Skip",
-        //          style: TextStyle(fontSize: 20, color: Colors.black))),
-        //        ),
-
-        //        Expanded(child: Container()),
-        //        Container(
-        //          margin: const EdgeInsets.only(right: 15),
-
-        //                 child: ElevatedButton(
-        //                   style: ElevatedButton.styleFrom(
-        //                     shape: RoundedRectangleBorder(
-        //                         borderRadius: BorderRadius.circular(500)),
-        //                     primary: Colors.black, // background
-        //                     onPrimary: Colors.white,
-        //                     // foreground
-        //                   ),
-        //                   onPressed: () {},
-        //                   child: const Text('Next'),
-        //                 ),
-        //               )
-        //      ],
-        //   ),
-        // ),
       ]),
     );
   }
