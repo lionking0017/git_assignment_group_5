@@ -69,10 +69,6 @@ flutter:
   - images/red.jpg
   - images/rippers.png
   
-
-  - images/page2.jpg
-  - images/page3.jpg
-
   
 
   # An image asset can refer to one or more resolution-specific "variants", see

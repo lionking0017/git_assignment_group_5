@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:git_ass/second_page.dart';
+import 'package:git_ass/secondpage.dart';
 
 
 class MyHomePage extends StatefulWidget {
@@ -103,6 +103,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               child: const Text('Next',
                                   style: TextStyle(fontSize: 20))),
                         ),
+
                             style: ElevatedButton.styleFrom(
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(500)),
