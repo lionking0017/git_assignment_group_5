@@ -13,3 +13,6 @@ Text descriptionoOne = Text(
 
 Text descriptionnTwo = Text(
     "Feel free to adust your workout & diet settingns accordinng to your comfort");
+
+Text descriptionThree =
+    Text("Get the fitness update everyday & improve performannce");

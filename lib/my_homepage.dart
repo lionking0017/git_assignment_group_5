@@ -41,19 +41,21 @@ class _MyHomePageState extends State<MyHomePage> {
             width: MediaQuery.of(context).size.width,
             decoration: const BoxDecoration(
               borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(30), topRight: Radius.circular(30)),
+                  topLeft: Radius.circular(0), topRight: Radius.circular(30)),
               color: Colors.white,
             ),
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const Padding(
+                    
                     padding: EdgeInsets.only(top: 45.0),
                     child: Text(
                       "Welcome",
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 40),
-                    ),
+                    
+                  ),
                   ),
                   const Padding(
                       padding: EdgeInsets.all(20.0),
