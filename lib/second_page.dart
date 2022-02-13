@@ -49,17 +49,7 @@ class _SecondPageState extends State<SecondPage> {
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 40),
                     ),
                   ),
-                  const Padding(
-                      padding: EdgeInsets.all(20.0),
-                      child: Center(
-                        child: Text(
-                          "Feel Free to adjust your workout BRO",
-                          style: TextStyle(
-                              fontWeight: FontWeight.normal,
-                              fontSize: 20,
-                              color: Colors.grey),
-                        ),
-                      )),
+                  const Padding(),
                   Padding(
                     padding: const EdgeInsets.only(top: 100.0),
                     child: Row(
