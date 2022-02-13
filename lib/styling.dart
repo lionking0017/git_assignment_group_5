@@ -2,4 +2,6 @@
 
 import 'dart:html';
 
-Text headingText = Text("Welcome");
+Text firstHeadingText = Text("Welcome");
+
+Text secondHeadingText = Text("Customize");
