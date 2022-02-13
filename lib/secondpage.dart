@@ -1,22 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:git_ass/secondpage.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+class SecondPage extends StatelessWidget {
+  const SecondPage({Key? key}) : super(key: key);
 
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(children: [
         Container(
-          decoration: const BoxDecoration(color: null),
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
           child: Image.asset(
@@ -27,11 +18,10 @@ class _MyHomePageState extends State<MyHomePage> {
         Padding(
           padding: const EdgeInsets.only(top: 90.0),
           child: Container(
-              decoration: const BoxDecoration(color: null),
               width: MediaQuery.of(context).size.width,
               height: 400,
               child: Image.asset(
-                "images/guy.png",
+                "images/page2.jpg",
                 fit: BoxFit.cover,
               )),
         ),
@@ -39,9 +29,8 @@ class _MyHomePageState extends State<MyHomePage> {
           padding: const EdgeInsets.only(top: 450.0),
           child: Container(
             width: MediaQuery.of(context).size.width,
-            decoration: const BoxDecoration(
-              borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(30), topRight: Radius.circular(30)),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(30),
               color: Colors.white,
             ),
             child: Column(
@@ -50,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   const Padding(
                     padding: EdgeInsets.only(top: 45.0),
                     child: Text(
-                      "Welcome",
+                      "Customize",
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 40),
                     ),
@@ -59,8 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       padding: EdgeInsets.all(20.0),
                       child: Center(
                         child: Text(
-                          "Explore the all new way to build your fitness and find the perfect fit for you.",
-                          textAlign: TextAlign.center,
+                          "Feel free to adjust your workout & diet settings according to your comfort",
                           style: TextStyle(
                               fontWeight: FontWeight.normal,
                               fontSize: 20,
@@ -83,27 +71,6 @@ class _MyHomePageState extends State<MyHomePage> {
                         Container(
                           margin: const EdgeInsets.only(right: 20),
                           child: ElevatedButton(
-<<<<<<< HEAD
-                              style: ElevatedButton.styleFrom(
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(500)),
-                                primary: Colors.black, // background
-                                onPrimary: Colors.white,
-                                // foreground
-                              ),
-                              onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => const SecondPage(
-                                        title: null,
-                                      ),
-                                    ));
-                              },
-                              child: const Text('Next',
-                                  style: TextStyle(fontSize: 20))),
-                        ),
-=======
                             style: ElevatedButton.styleFrom(
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(500)),
@@ -111,17 +78,10 @@ class _MyHomePageState extends State<MyHomePage> {
                               onPrimary: Colors.white,
                               // foreground
                             ),
-                            onPressed: () {
-                              Navigator.of(context).push(
-                                MaterialPageRoute(
-                                  builder: (context) => SecondPage(),
-                                ),
-                              );
-                            },
+                            onPressed: () {},
                             child: const Text('Next'),
                           ),
                         )
->>>>>>> main
                       ],
                     ),
                   ),
