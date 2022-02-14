@@ -2,62 +2,64 @@ import 'package:flutter/material.dart';
 import 'package:git_ass/second_page.dart';
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
+  const MyHomePage({Key? key, required String title}) : super(key: key);
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  get onPressed => null;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(children: [
-        Container(
-          decoration: const BoxDecoration(color: null),
-          width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height,
-          child: Image.asset(
-            "images/blue.jpg",
-            fit: BoxFit.cover,
-          ),
-        ),
-        const SafeArea(
-          child: Padding(
-            padding: EdgeInsets.all(15.0),
-            child: Text(
-              "BeFit",
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 26,
-                  fontWeight: FontWeight.w700),
-            ),
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(top: 90.0),
-          child: Container(
+      body: Stack(
+        children: [
+          Container(
             decoration: const BoxDecoration(color: null),
             width: MediaQuery.of(context).size.width,
-            height: 400,
+            height: MediaQuery.of(context).size.height,
             child: Image.asset(
-              "images/guy.png",
+              "images/blue.jpg",
               fit: BoxFit.cover,
             ),
           ),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(top: 450.0),
-          child: Container(
-            width: MediaQuery.of(context).size.width,
-            decoration: const BoxDecoration(
-              borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(30), topRight: Radius.circular(30)),
-              color: Colors.white,
+          const SafeArea(
+            child: Padding(
+              padding: EdgeInsets.all(15.0),
+              child: Text(
+                "BeFit",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 26,
+                    fontWeight: FontWeight.w700),
+              ),
             ),
-            child: Column(
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 90.0),
+            child: Container(
+              decoration: const BoxDecoration(color: null),
+              width: MediaQuery.of(context).size.width,
+              height: 400,
+              child: Image.asset(
+                "images/guy.png",
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 450.0),
+            child: Container(
+              width: MediaQuery.of(context).size.width,
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(30),
+                    topRight: Radius.circular(30)),
+                color: Colors.white,
+              ),
+              child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const Padding(
@@ -149,10 +151,11 @@ class _MyHomePageState extends State<MyHomePage> {
                               onPrimary: Colors.white,
                             ),
                             onPressed: () {
-                              Navigator.of(context).push(
+                              Navigator.push(
+                                context,
                                 MaterialPageRoute(
                                   builder: (context) => const SecondPage(
-                                    title: null,
+                                    title: 'null',
                                   ),
                                 ),
                               );
@@ -164,10 +167,12 @@ class _MyHomePageState extends State<MyHomePage> {
                       ],
                     ),
                   ),
-                ]),
+                ],
+              ),
+            ),
           ),
-        ),
-      ]),
+        ],
+      ),
     );
   }
 }

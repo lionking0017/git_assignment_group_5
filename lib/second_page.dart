@@ -145,9 +145,8 @@ class _SecondPageState extends State<SecondPage> {
                             style: ElevatedButton.styleFrom(
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(500)),
-                              primary: Colors.black, // background
+                              primary: Colors.black,
                               onPrimary: Colors.white,
-                              // foreground
                             ),
                             onPressed: () {
                               Navigator.push(
