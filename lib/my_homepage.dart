@@ -1,73 +1,135 @@
 import 'package:flutter/material.dart';
-import 'package:git_ass/secondpage.dart';
-
+import 'package:git_ass/second_page.dart';
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+  const MyHomePage({Key? key, required String title}) : super(key: key);
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  get onPressed => null;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(children: [
-        Container(
-          decoration: const BoxDecoration(color: null),
-          width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height,
-          child: Image.asset(
-            "images/bgbg.jpg",
-            fit: BoxFit.cover,
+      body: Stack(
+        children: [
+          Container(
+            decoration: const BoxDecoration(color: null),
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height,
+            child: Image.asset(
+              "images/blue.jpg",
+              fit: BoxFit.cover,
+            ),
           ),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(top: 90.0),
-          child: Container(
+          const SafeArea(
+            child: Padding(
+              padding: EdgeInsets.all(15.0),
+              child: Text(
+                "BeFit",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 26,
+                    fontWeight: FontWeight.w700),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 90.0),
+            child: Container(
               decoration: const BoxDecoration(color: null),
               width: MediaQuery.of(context).size.width,
-              height: 450,
+              height: 400,
               child: Image.asset(
                 "images/guy.png",
                 fit: BoxFit.cover,
-              )),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(top: 350.0),
-          child: Container(
-            width: MediaQuery.of(context).size.width,
-            decoration: const BoxDecoration(
-              borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(0), topRight: Radius.circular(30)),
-              color: Colors.white,
+              ),
             ),
-            child: Column(
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 450.0),
+            child: Container(
+              width: MediaQuery.of(context).size.width,
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(30),
+                    topRight: Radius.circular(30)),
+                color: Colors.white,
+              ),
+              child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  const Padding(                 
-                    padding: EdgeInsets.only(top: 45.0),
+                  const Padding(
+                    padding: EdgeInsets.only(top: 30.0),
                     child: Text(
                       "Welcome!",
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 40),                    
-                  ),
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 40,
+                          letterSpacing: 4),
+                    ),
                   ),
                   const Padding(
-                      padding: EdgeInsets.all(20.0),
-                      child: Center(
-                        child: Text(
-                          "Explore the all new way to build your fitness and find the perfect fit for you.",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              fontWeight: FontWeight.normal,
-                              fontSize: 20,
-                              color: Colors.grey),
-                        ),
-                      )),
+                    padding: EdgeInsets.only(top: 15),
+                    child: Center(
+                      child: Text(
+                        "Explore the all new way to build",
+                        textHeightBehavior: TextHeightBehavior(
+                            leadingDistribution: TextLeadingDistribution.even),
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 22,
+                            letterSpacing: 1.3,
+                            color: Colors.grey),
+                      ),
+                    ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+                      Text(
+                        "your fitness & find the",
+                        textHeightBehavior: TextHeightBehavior(
+                            leadingDistribution: TextLeadingDistribution.even),
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 22,
+                            letterSpacing: 1.3,
+                            color: Colors.grey),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+                      Text(
+                        "perfect fit for you.",
+                        textHeightBehavior: TextHeightBehavior(
+                            leadingDistribution: TextLeadingDistribution.even),
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 22,
+                            letterSpacing: 1.3,
+                            color: Colors.grey),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  SizedBox(
+                      child: Image.asset(
+                    "images/Breadcrumb1.png",
+                    width: 50,
+                  )),
                   Padding(
-                    padding: const EdgeInsets.only(top: 100.0),
+                    padding: const EdgeInsets.only(top: 60.0),
                     child: Row(
                       children: [
                         Container(
@@ -76,55 +138,41 @@ class _MyHomePageState extends State<MyHomePage> {
                               onPressed: () {},
                               child: const Text("Skip",
                                   style: TextStyle(
-                                      fontSize: 20, color: Colors.black))),
+                                      fontSize: 18, color: Colors.grey))),
                         ),
                         Expanded(child: Container()),
                         Container(
                           margin: const EdgeInsets.only(right: 20),
                           child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(500)),
-                                primary: Colors.black, // background
-                                onPrimary: Colors.white,
-                                // foreground
-                              ),
-                              onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => const SecondPage(
-                                        title: null,
-                                      ),
-                                    ));
-                              },
-                              child: const Text('Next',
-                                  style: TextStyle(fontSize: 20))),
-                        ),
                             style: ElevatedButton.styleFrom(
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(500)),
-                              primary: Colors.black, // background
+                              primary: Colors.black,
                               onPrimary: Colors.white,
-                              // foreground
                             ),
                             onPressed: () {
-                              Navigator.of(context).push(
+                              Navigator.push(
+                                context,
                                 MaterialPageRoute(
-                                  builder: (context) => SecondPage(),
+                                  builder: (context) => const SecondPage(
+                                    title: 'null',
+                                  ),
                                 ),
                               );
                             },
-                            child: const Text('Next'),
+                            child: const Text('NEXT',
+                                style: TextStyle(fontSize: (12))),
                           ),
                         )
                       ],
                     ),
                   ),
-                ]),
+                ],
+              ),
+            ),
           ),
-        ),
-      ]),
+        ],
+      ),
     );
   }
 }

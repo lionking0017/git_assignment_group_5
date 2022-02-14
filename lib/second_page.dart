@@ -20,8 +20,20 @@ class _SecondPageState extends State<SecondPage> {
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
           child: Image.asset(
-            "images/vector.jpg",
+            "images/yellow.jpg",
             fit: BoxFit.cover,
+          ),
+        ),
+        const SafeArea(
+          child: Padding(
+            padding: EdgeInsets.all(15.0),
+            child: Text(
+              "BeFit",
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 26,
+                  fontWeight: FontWeight.w700),
+            ),
           ),
         ),
         Padding(
@@ -31,7 +43,7 @@ class _SecondPageState extends State<SecondPage> {
               width: MediaQuery.of(context).size.width,
               height: 400,
               child: Image.asset(
-                "images/Brock.png",
+                "images/fitted.png",
                 fit: BoxFit.cover,
               )),
         ),
@@ -48,27 +60,74 @@ class _SecondPageState extends State<SecondPage> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const Padding(
-                    padding: EdgeInsets.only(top: 45.0),
+                    padding: EdgeInsets.only(top: 30.0),
                     child: Text(
                       "Customize",
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 40),
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 40,
+                          letterSpacing: 4),
                     ),
                   ),
                   const Padding(
-                      padding: EdgeInsets.all(20.0),
-                      child: Center(
-                        child: Text(
-                          "Feel Free to adjust your workout and diet settings according to your comfort.",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              fontWeight: FontWeight.normal,
-                              fontSize: 20,
-                              color: Colors.grey),
-                        ),
-                      )),
+                    padding: EdgeInsets.only(top: 15.0),
+                    child: Center(
+                      child: Text(
+                        "Feel free to adjust your workout",
+                        textHeightBehavior: TextHeightBehavior(
+                            leadingDistribution: TextLeadingDistribution.even),
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 22,
+                            letterSpacing: 1.3,
+                            color: Colors.grey),
+                      ),
+                    ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+                      Text(
+                        "& diet settings according to",
+                        textHeightBehavior: TextHeightBehavior(
+                            leadingDistribution: TextLeadingDistribution.even),
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 22,
+                            letterSpacing: 1.3,
+                            color: Colors.grey),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+                      Text(
+                        "your comfort.",
+                        textHeightBehavior: TextHeightBehavior(
+                            leadingDistribution: TextLeadingDistribution.even),
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 22,
+                            letterSpacing: 1.3,
+                            color: Colors.grey),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  SizedBox(
+                    child: Image.asset(
+                      "images/Breadcrumb2.png",
+                      width: 50,
+                    ),
+                  ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 100.0),
+                    padding: const EdgeInsets.only(top: 60.0),
                     child: Row(
                       children: [
                         Container(
@@ -77,7 +136,7 @@ class _SecondPageState extends State<SecondPage> {
                               onPressed: () {},
                               child: const Text("Skip",
                                   style: TextStyle(
-                                      fontSize: 20, color: Colors.black))),
+                                      fontSize: 18, color: Colors.grey))),
                         ),
                         Expanded(child: Container()),
                         Container(
@@ -86,9 +145,8 @@ class _SecondPageState extends State<SecondPage> {
                             style: ElevatedButton.styleFrom(
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(500)),
-                              primary: Colors.black, // background
+                              primary: Colors.black,
                               onPrimary: Colors.white,
-                              // foreground
                             ),
                             onPressed: () {
                               Navigator.push(
@@ -99,8 +157,8 @@ class _SecondPageState extends State<SecondPage> {
                                     ),
                                   ));
                             },
-                            child: const Text('Next',
-                                style: TextStyle(fontSize: 20)),
+                            child: const Text('NEXT',
+                                style: TextStyle(fontSize: 12)),
                           ),
                         )
                       ],
