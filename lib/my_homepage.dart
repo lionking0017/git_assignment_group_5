@@ -26,14 +26,14 @@ class _MyHomePageState extends State<MyHomePage> {
           padding: const EdgeInsets.only(top: 90.0),
           child: Container(
               width: MediaQuery.of(context).size.width,
-              height: 400,
+              height: 450,
               child: Image.asset(
                 "images/guy.png",
                 fit: BoxFit.cover,
               )),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 450.0),
+          padding: const EdgeInsets.only(top: 350.0),
           child: Container(
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
@@ -44,11 +44,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const Padding(
-                    padding: EdgeInsets.only(top: 45.0),
+                    padding: EdgeInsets.only(top: 35.0),
                     child: Text(
-                      "Welcome",
+                      "Welcome!",
                       style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 40),
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
                     ),
                   ),
                   const Padding(
@@ -62,7 +62,6 @@ class _MyHomePageState extends State<MyHomePage> {
                               color: Colors.grey),
                         ),
                       )),
-                      
                   Padding(
                     padding: const EdgeInsets.only(top: 100.0),
                     child: Row(
